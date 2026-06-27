@@ -1,0 +1,67 @@
+version: '3'
+
+services:
+  kvdnode0:
+    container_name: grbcnode0
+    image: "grbc/grbcnode"
+    ports:
+      - "42656-42657:42656-42657"
+    environment:
+      - ID=0
+      - LOG=${LOG:-grbc.log}
+    volumes:
+      - ./build:/root/.grbc:Z
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.2
+
+  kvdnode1:
+    container_name: grbcnode1
+    image: "grbc/grbcnode"
+    ports:
+      - "42659-42660:42656-42657"
+    environment:
+      - ID=1
+      - LOG=${LOG:-grbc.log}
+    volumes:
+      - ./build:/root/.grbc:Z
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.3
+
+  kvdnode2:
+    container_name: grbcnode2
+    image: "grbc/grbcnode"
+    environment:
+      - ID=2
+      - LOG=${LOG:-grbc.log}
+    ports:
+      - "42661-42662:42656-42657"
+    volumes:
+      - ./build:/root/.grbc:Z
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.4
+
+  kvdnode3:
+    container_name: grbcnode3
+    image: "grbc/grbcnode"
+    environment:
+      - ID=3
+      - LOG=${LOG:-grbc.log}
+    ports:
+      - "42663-42664:42656-42657"
+    volumes:
+      - ./build:/root/.grbc:Z
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.5
+
+networks:
+  localnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 192.168.10.0/16
