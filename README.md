@@ -63,8 +63,13 @@ grbc start
 
 ## Docker (Recommended)
 
+Prebuilt image:
+https://github.com/orgs/GriubCoin-Network/packages/container/package/grbc-node
+
+Validators MUST use a fixed version tag (do NOT use `latest`)
+
 ```bash
-docker pull dmrdev2/grbc-node:latest
+docker pull ghcr.io/griubcoin-network/grbc-node:1.0.0
 ```
 
 Run node:
@@ -75,11 +80,63 @@ docker run -d \
   -p 26656:26656 \
   -p 26657:26657 \
   -v $HOME/.grbc:/root/.grbc \
-  dmrdev2/grbc-node:latest \
+  ghcr.io/griubcoin-network/grbc-node:1.0.0 \
   grbc start
 ```
 
+## CLI Reference
+
+This section provides basic command-line interface (CLI) usage for GriubCoin (GRBC) node.
+
 ---
+
+## General
+```bash
+Check version:
+grbc version
+
+Check node status:
+grbc status
+
+Create a new wallet:
+grbc keys add <key-name>
+
+Save your mnemonic securely. It cannot be recovered !!!
+
+List wallets:
+grbc keys list
+
+Show wallet address:
+grbc keys show <key-name> -a
+
+Initialize node:
+grbc init "moniker-name" --chain-id griubcoin_44211-1
+
+Add genesis account (testnet / local setup):
+grbc add-genesis-account <address> 1000000ugrbc
+
+Validate genesis file:
+grbc validate-genesis
+
+Query Blockchain:
+Check account balance
+grbc query bank balances <address>
+
+List validators:
+grbc query staking validators
+
+Transactions:
+Send tokens
+grbc tx bank send <from> <to> <amount>ugrbc --chain-id griubcoin_44211-1
+
+Start full node:
+grbc start
+
+Stop node (Docker):
+docker stop grbc-node
+
+Restart node (Docker):
+docker restart grbc-node
 
 ## Network Info
 
