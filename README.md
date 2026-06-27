@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![version](https://img.shields.io/github/tag/GriubCoin-Network/GriubCoin.svg)](https://github.com/GriubCoin-Network/GriubCoin/releases/latest)
+[![version](https://img.shields.io/github/tag/GriubCoin-Network/griubcoin.png)](https://github.com/GriubCoin-Network/GriubCoin/releases/latest)
 [![Go Report Card](https://goreportcard.com/badge/github.com/GriubCoin-Network/GriubCoin)](https://goreportcard.com/report/github.com/GriubCoin-Network/GriubCoin)
 [![GitHub](https://img.shields.io/github/license/GriubCoin-Network/GriubCoin.svg)](https://github.com/GriubCoin-Network/GriubCoin/blob/master/LICENSE.md)
 [![Twitter Follow](https://img.shields.io/twitter/follow/griubcoin.svg?label=Follow\&style=social)](https://twitter.com/griubcoin)
@@ -15,17 +15,15 @@
 
 <div align="center">
 
-### [Telegram](https://t.me/griubcoin) | [GitHub](https://github.com/GriubCoin-Network/GriubCoin)
+### [Telegram](https://t.me/griubcoin)
 
 </div>
 
 ---
 
-## 🌐 Overview
+GriubCoin (GRBC) is a Layer 1 blockchain network built as a fork of the Kava codebase, extended and modified for the GriubCoin ecosystem.
 
-GriubCoin (GRBC) is a blockchain network built as a fork of the Cosmos SDK ecosystem, designed for decentralized applications and custom token infrastructure.
-
-This implementation provides a full-node client for participating in the GriubCoin network as a validator or full node.
+The project focuses on simplicity, validator participation, and community-driven development.
 
 ---
 
@@ -42,7 +40,7 @@ Current recommended version: **v1.0.0**
 ```bash
 git clone https://github.com/GriubCoin-Network/GriubCoin.git
 cd GriubCoin
-make install
+make build
 ```
 
 ---
