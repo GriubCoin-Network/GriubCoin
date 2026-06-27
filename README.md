@@ -137,6 +137,7 @@ docker stop grbc-node
 
 Restart node (Docker):
 docker restart grbc-node
+```
 
 ## Network Info
 
