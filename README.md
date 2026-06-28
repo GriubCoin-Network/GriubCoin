@@ -66,7 +66,7 @@ grbc start
 Prebuilt image:
 https://github.com/orgs/GriubCoin-Network/packages/container/package/grbc-node
 
-Validators MUST use a fixed version tag (do NOT use `latest`)
+Validators MUST use a fixed version tag !
 
 ```bash
 docker pull ghcr.io/griubcoin-network/grbc-node:1.0.0
