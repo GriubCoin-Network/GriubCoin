@@ -26,6 +26,7 @@
 The network is operating in a development/test environment and may change at any time without notice.
 
 No guarantees are provided regarding stability, security, or persistence of chain data.
+
 ---
 
 GriubCoin (GRBC) is a Layer 1 blockchain network built as a fork of the Kava codebase, extended and modified for the GriubCoin ecosystem.
