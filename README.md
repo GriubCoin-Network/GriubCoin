@@ -53,7 +53,7 @@ make build
 
 ---
 
-## 🧪 Running a Node
+## 🧪 Development Node
 
 ### Initialize node
 
